@@ -4,7 +4,6 @@
     <link rel="stylesheet" href="libs/css/bootstrap.min.css" />
     <link rel="stylesheet" href="libs/css/dataTables.bootstrap5.min.css" />
     <link rel="stylesheet" href="libs/css/style.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
     <script src="libs/js/bootstrap.bundle.min.js"></script>
     <!--Transition between pages-->
     <style>
@@ -29,10 +28,9 @@
 
 <body>
     <div class="sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" style="padding: 10px">
+        <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm" style="padding: 10px">
             <!--Left side nav-->
-            <a class="btn btn-outline-secondary" href="index.php">Home</a>
-
+            <a class="btn btn-outline-primary" href="index.php">Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

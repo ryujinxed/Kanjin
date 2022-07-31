@@ -6,8 +6,8 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row" style="margin: 50px">
+    <div class="container" style="min-height: 100%">
+        <div class="row" style="margin: 50px; text-align: center">
             <!--JLPT Levels by card-->
             <div class="col-sm-3" style="min-width: 250px">
                 <div class="card-body py-5 shadow p-3 mb-5 bg-white rounded">

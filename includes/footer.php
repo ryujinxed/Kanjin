@@ -1,10 +1,11 @@
 <footer class="text-center text-white sticky-bottom" style="background-color: #f1f1f1;">
-    <div class="container pt-4">
-        <section class="mb-4">
+    <!--Upper part-->
+    <div class="container pt-2">
+        <section class="mb-2">
             <label class="text-secondary">Developer Contacts</label>
         </section>
     </div>
-
+    <!--Lower part-->
     <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
         <a href="https://facebook.com/rjinxed">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi bi-facebook" viewBox="0 0 16 16">
