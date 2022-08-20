@@ -9,12 +9,13 @@
     <?php $level = $_GET['JLPT']; ?>
     <div class="container-xl">
         <div class="row" style="margin: 10px">
-            <!-- Loop for each randomized kanji in the database -->
-            <?php $query = $conn->query("SELECT * FROM kanji_tbl WHERE jlpt='$level' ORDER BY RAND()");
+            <?php
+            $query = $conn->query("SELECT * FROM kanji_tbl WHERE jlpt='$level' ORDER BY RAND()");
+            #Loop for each randomized kanji in the database    
             while ($row = mysqli_fetch_array($query)) {
             ?>
                 <div class="col-sm-6">
-                    <div class="row bg-light rounded shadow" style="padding: 0px; margin: 10px">
+                    <div class="row bg-light rounded shadow" style="padding: 0px; margin: 5px">
                         <div class="col-sm-3 rounded bg-secondary" style="text-align: center">
                             <h1 class="text-light" style="font-size: 75px"><?php echo $row['kanji']; ?></h1>
                         </div>
@@ -37,10 +38,25 @@
                                 $question[3] = $answer;
 
                                 #Shuffle and print question array
-                                shuffle($question);
-                                for ($i = 0; $i <= 3; $i++) {
-                                    echo "<button type='button' class='btn bg-white' style='margin: 5px' name=" . $question[$i] . "data-bs-toggle='modal' data-bs-target=''>" . $question[$i] . "</button></br>";
-                                } ?>
+                                shuffle($question); ?>
+                                <form action="">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="<?php echo $question[0]; ?>" name="<?php echo $answer; ?>" id="<?php echo $question[0]; ?>">
+                                        <label class="form-check-label" for="<?php echo $question[0]; ?>"><?php echo $question[0]; ?></label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="<?php echo $question[1]; ?>" name="<?php echo $answer; ?>" id="<?php echo $question[1]; ?>">
+                                        <label class="form-check-label" for="<?php echo $question[1]; ?>"><?php echo $question[1]; ?></label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="<?php echo $question[2]; ?>" name="<?php echo $answer; ?>" id="<?php echo $question[2]; ?>">
+                                        <label class="form-check-label" for="<?php echo $question[2]; ?>"><?php echo $question[2]; ?></label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="<?php echo $question[3]; ?>" name="<?php echo $answer; ?>" id="<?php echo $question[3]; ?>">
+                                        <label class="form-check-label" for="<?php echo $question[3]; ?>"><?php echo $question[3]; ?></label>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-<footer class="text-center text-white sticky-bottom" style="background-color: #f1f1f1;">
+<footer class="text-center text-white" style="background-color: #f1f1f1;">
     <!--Upper part-->
     <div class="container pt-2">
         <section class="mb-2">

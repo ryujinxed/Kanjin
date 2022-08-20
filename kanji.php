@@ -75,7 +75,7 @@
                 <button type="button" class="btn btn-primary shadow-sm p-1 rounded" data-bs-toggle="modal" data-bs-target="#admin">
                     <h6 style="margin: 15px">Add a Kanji</h6>
                 </button>
-                <a type="button" class="btn btn-success shadow-sm p-1 rounded" href="quiz.php?JLPT=<?php echo $_GET['JLPT']?>">
+                <a type="button" class="btn btn-success shadow-sm p-1 rounded" href="quiz.php?JLPT=<?php echo $_GET['JLPT'] ?>">
                     <h6 style="margin: 15px">Quiz</h6>
                 </a>
             </div>
@@ -141,26 +141,28 @@
                     <h6><?php echo $row['meaning'] ?></h6>
                 </div>
                 <!-- Kanji modal -->
-                <div class="modal fade" id="<?php echo $row['kanji']; ?>" tabindex="-1" aria-labelledby="<?php echo $row['kanji']; ?>" aria-hidden="true" data-bs-backdrop="static">
+                <div class="modal fade" id="<?php echo $row['kanji']; ?>" tabindex="-1" aria-labelledby="<?php echo $row['kanji']; ?>" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-lg">
-                        <div class="modal-content" style="border: 0px; margin: 50px">
-                            <div class="modal-header justify-content-center bg-secondary text-light">
-                                <h1 style="font-size: 150px; text-align: center" id="<?php echo $row['kanji']; ?>"><?php echo $row['kanji']; ?></h1>
-                            </div>
-                            <div class="modal-body" style="padding: 20px">
-                                <div class="row">
-                                    <div class="modal-body col-md-3">
-                                        <h6>Meaning: &nbsp;&nbsp;&nbsp;&nbsp; <?php echo $row['meaning']; ?></h6>
-                                        <h6>Onyomi: &nbsp;&nbsp;&nbsp;&nbsp; <?php echo $row['onyomi']; ?></h6>
-                                        <h6>Kunyomi: &nbsp;&nbsp;&nbsp;&nbsp; <?php echo $row['kunyomi']; ?></h6>
-                                    </div>
-                                    <div class="modal-body col-md-3">
-                                        <h6>Example: &nbsp;&nbsp;&nbsp;&nbsp; <?php echo $row['example']; ?></h6>
-                                    </div>
+                        <div class="modal-content" style="border: 0px;">
+                            <div class="modal-header justify-content-center bg-white" style="border: 0px">
+                                <div class="col-sm text-dark" style="text-align: center">
+                                    <h1 class="display-4" style="font-size: 150px" id="<?php echo $row['kanji']; ?>"><?php echo $row['kanji']; ?></h1></br>
+                                    <h5><?php echo $row['meaning']; ?></h5>
+                                </div>
+                                <div class="col-sm rounded bg-secondary text-white shadow" style="padding: 30px">
+                                    <h6>Onyomi:</h6>
+                                    <h5><?php echo $row['onyomi']; ?></h5></br>
+                                    <h6>Kunyomi:</h6>
+                                    <h5><?php echo $row['kunyomi']; ?></h5>
                                 </div>
                             </div>
-                            <div class="modal-footer bg-light" style="border: 0px; padding: 0px">
-                                <button type="button" class="btn bg-light" data-bs-dismiss="modal">Close</button>
+                            <div class="modal-body bg-light" style="padding: 50px">
+                                <div class="col-md-6">
+                                    <h6>Example: </br></br> <?php echo $row['example']; ?></h6>
+                                </div>
+                            </div>
+                            <div class="modal-footer bg-white" style="border: 0px">
+                                <button type="button" class="btn bg-light text-primary" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
